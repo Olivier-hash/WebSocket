@@ -1,11 +1,11 @@
 // webSocket Server.js
-const express = require("express");
-const http = require("http");
-const WebSocket = require("ws");
+import express from"express";
+import {createServer } from "http";
+import { WebSocketServer } from"ws";
 
 const app = express();
-const server = http.createServer(app);
-const wss = new WebSocket.Server({ server });
+const server = createServer(app);
+const wss = new WebSocketServer({ server });
 
 wss.on("connection", (ws) => {
   ws.on("message", (message) => {
