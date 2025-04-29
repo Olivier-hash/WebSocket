@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import ChatBox from './components/ChatBox';
 import MessageInput from './components/MessageInput';
-import './App.css';
+// import './App.css';
 
 function App() {
   const socket = useRef(null);
